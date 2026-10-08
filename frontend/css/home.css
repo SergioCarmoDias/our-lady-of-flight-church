@@ -1,0 +1,221 @@
+.top-section, .bottom-section {
+    display: grid;
+    grid-template-columns: 2.0fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;  /* Adds real spacing on the left */
+    margin-right: 30px; /* Adds real spacing on the right */
+    width: auto;
+}
+
+/* Cunchelim History Box (Centered content) */
+.cunchelim-history-box {
+    background-color: #ffffffb3;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #bce8f1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Overlap container for text and button */
+.history-overlap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; /* Adds side padding so text doesn't touch box edges */
+}
+
+/* Image container styling */
+.history-thumb-container {
+    width: 100%;
+    max-width: 130px; /* Adjust width to fit nicely on the card */
+    margin-bottom: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-thumb-container img {
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    display: none; /* Keeps hidden until JS loads the image */
+}
+
+/* Inner wrapper for text & button overlap effect */
+.history-content-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
+    width: 100%;
+    padding: 0 60px;
+}
+
+.history-content, 
+.read-more {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.cunchelim-history-box h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.history-content div {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits text strictly to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+    margin-bottom: 25px; /* Leaves space at the bottom for the overlapping button */
+    /* Fades the bottom edge of the text slightly */
+    -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+}
+
+/* Happenings Section & Mass Timings Sidebars */
+.happenings-section, .mass-timings-box {
+    background-color: #ffffffb3;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #bce8f1;
+}
+
+.happenings-section h3, .mass-timings-box h3 {
+    font-size: 16px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Home Mass Preview Styling */
+.home-timing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home-timing-item {
+    font-size: 14px;
+    color: #444;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.home-timing-item:last-child {
+    border-bottom: none;
+}
+
+.home-timing-item:hover {
+    background-color: rgba(91, 192, 222, 0.08);
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+}
+
+/* Gallery Box (Centered content & grid thumbnails) */
+.gallery-box {
+    background-color: #ffffffb3;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #bce8f1;
+    text-align: center;
+}
+
+.gallery-box h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Make this a grid container to allow overlapping */
+.gallery-overlap-container {
+    display: grid;
+    grid-template-rows: 1fr; /* Single row */
+    grid-template-columns: 1fr; /* Single column layout overlay */
+    justify-items: center;    /* Centers items horizontally */
+    align-items: end;         /* Pushes the overlapping button towards the bottom */
+}
+
+/* Force both elements to sit in the exact same grid cell (Row 1 / Column 1) */
+.gallery-grid, 
+.view-more {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 30px;
+    margin-bottom: 20px; /* button overlap*/ 
+}
+
+.gallery-thumb {
+    width: 240px;
+    height: 240px;
+    background-color: #333;
+    border-radius: 6px;
+    overflow: hidden; /* Keeps images nicely rounded inside thumb boxes */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.more-thumb {
+    background-color: #bcbcbc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Equal-sized action buttons centered in their boxes */
+.view-more {
+    text-decoration: none;
+    color: #000;
+    background-color: #a4ebff;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 160px;
+    text-align: center;
+    margin-bottom: -10px; /* Adjusts how high or low the button overlaps onto the thumbnails */
+    z-index: 2; /* Ensures the button sits cleanly on top of the images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlapping Read More Button */
+.read-more {
+    text-decoration: none;
+    color: #000;
+    background-color: #a4ebff;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    display: block;
+    width: 160px;
+    margin-bottom: 5px; /* Pulls it up to overlap the text nicely */
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-more:hover, .view-more:hover {
+    background-color: #5bc0de;
+}

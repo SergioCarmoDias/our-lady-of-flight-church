@@ -1,0 +1,284 @@
+.services-page-wrapper {
+    max-width: 1374px;
+    margin: 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.service-card {
+    background-color: #ffffffb3;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #bce8f1;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.service-icon {
+    font-size: 28px;
+    color: #5bc0de;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #a4ebff;
+    padding-bottom: 6px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+/* Lower Bottom Section (Mass Timings & Notices) */
+.services-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.mass-timings-box, .notices-box {
+    background-color: #ffffffb3;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #bce8f1;
+}
+
+.mass-timings-box h3, .notices-box h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #a4ebff;
+    padding-bottom: 6px;
+}
+
+.timing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timing-list li {
+    font-size: 14px;
+    color: #444;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.timing-list li:last-child {
+    border-bottom: none;
+}
+
+#noticeAreaContent p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Notice Container Styles matching main layout widths */
+.notice-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 250px;
+    grid-column: 1 / -1; /* <-- This forces it to span both columns across the full width */
+    box-sizing: border-box;
+    margin: 30px 0; /* adjust margin as needed */
+    background-color: #ffffffb3;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid #bce8f1;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #a4ebff;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.notice-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+#noticeDisplay {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+#noticeEditSection {
+    display: none;
+    margin-top: 15px;
+}
+
+#noticeInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.notice-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#cancelNoticeBtn {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+#cancelNoticeBtn:hover {
+    background-color: #7f8c8d;
+}
+
+#saveNoticeBtn {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#saveNoticeBtn:hover {
+    background-color: #46b8da;
+}
+
+.mass-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.mass-table th, .mass-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #444;
+}
+
+.mass-table th {
+    background-color: #a4ebff;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.mass-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.mass-table input, .mass-table select {
+    width: 100%;
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.edit-row-btn, .save-row-btn {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.edit-row-btn:hover, .save-row-btn:hover {
+    background-color: #46b8da;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mass-table, .mass-table tbody, .mass-table tr, .mass-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .mass-table thead {
+        display: none; /* Hide table header on mobile */
+    }
+
+    .mass-table tr {
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        border: 1px solid #bce8f1;
+        border-radius: 6px;
+        padding: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .mass-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        padding: 8px 10px;
+        border-bottom: 1px dashed #eee;
+    }
+
+    .mass-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Add labels automatically using the data-label attribute */
+    .mass-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: left;
+    }
+
+    .mass-table input, .mass-table select {
+        width: 60%;
+    }
+}
