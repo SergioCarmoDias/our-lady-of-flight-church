@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Our Lady of Flight Church</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/services.css">
+    
+    <script src="../js/main.js" defer></script>
+    <script src="../js/services.js" defer></script>
+</head>
+<body>
+    <!-- Admin Control Panel (Hidden by default) -->
+    <div id="admin-controls" style="display: none;" class="admin-bar">
+        <span>Logged in as Admin</span>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+
+    <img src="../../images/church-background.jpg" alt="Church background" class="church-image"> 
+    <!-- or blue colour background -->
+    
+    <!-- Header / Navigation -->
+    <header class="nav-bar">
+        <div class="logo"><img src="../../images/church-logo.png" alt="The logo"></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="happenings.html">Happenings</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="services-page-wrapper">
+        <div class="about-content-box">
+            <h1>Parish Services & Sacraments</h1>
+            
+            <!-- Main Services Grid -->
+            <div class="services-grid">
+                <!-- Baptism -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-water"></i></div>
+                    <h3>Baptism</h3>
+                    <p>The first sacrament of initiation, welcoming new members into the Christian community and cleansing original sin.</p>
+                </div>
+
+                <!-- Confession -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                    <h3>Confession</h3>
+                    <p>The sacrament of reconciliation and penance, offering God's boundless mercy, forgiveness, and spiritual healing.</p>
+                </div>
+
+                <!-- Wedding -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-ring"></i></div>
+                    <h3>Wedding</h3>
+                    <p>Holy Matrimony uniting a couple in a lifelong covenant before God, family, and the parish community.</p>
+                </div>
+
+                <!-- Anointing of the Sick -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                    <h3>Anointing of the Sick</h3>
+                    <p>Providing comfort, strength, and spiritual grace to those facing serious illness, surgery, or advanced age.</p>
+                </div>
+
+                <!-- Funeral -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-cross"></i></div>
+                    <h3>Funeral Services</h3>
+                    <p>Compassionate prayer, funeral masses, and Christian burial rites commending souls into God's eternal peace.</p>
+                </div>
+            </div>
+
+            <!-- Lower Section: Mass Timings & Notices Grid -->
+            <div class="services-bottom-grid">
+                <!-- Mass Timings Box -->
+                <div class="mass-timings-box" id="massTimingsSection" style="grid-column: 1 / -1;">
+                    <h3>Mass Timings & Intentions Schedule</h3>
+                    <div style="overflow-x: auto;">
+                        <table class="mass-table" id="massTimingsTable">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Mass Title</th>
+                                    <th>Organizer</th>
+                                    <th>Intention / Tag</th>
+                                    <th id="adminHeader" style="display: none;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="massTableBody">
+                                <tr>
+                                    <td colspan="6" style="text-align: center;">Loading schedule...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Notice Area -->
+                <div class="notice-container" id="noticeContainer">
+                    <div class="notice-header">
+                        <h3>📢 Parish Notice</h3>
+                        <button id="editNoticeBtn" class="edit-row-btn" style="display: none;">Edit</button>
+                    </div>
+                    
+                    <!-- Static display view -->
+                    <div id="noticeDisplay">Loading notice...</div>
+
+                    <!-- Hidden edit view -->
+                    <div id="noticeEditSection">
+                        <textarea id="noticeInput" rows="3"></textarea>
+                        <div class="notice-actions">
+                            <button id="cancelNoticeBtn" class="btn">Cancel</button>
+                            <button id="saveNoticeBtn" class="btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>SITE NAVIGATION</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="happenings.html">Happenings</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>OFFICE HOURS</h4>
+                <p>Mon - Sat: 8:30 AM - 12:30 PM & 3:30 PM - 5:00 PM</p>
+                <p>2nd Saturday & 4th Saturday Half Day (8:30 AM - 12:30 PM)</p>
+                <p>Sunday Closed</p>
+                <p>Public Holidays Closed</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>ADDRESS</h4>
+                <p>Cunchelim Mapusa<br>Bardez -Goa.<br>Pin code: 403507</p>
+                <p>E-mail: example@gmail.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <span class="social-icon">f</span>
+                    <span class="social-icon">i</span>
+                    <span class="social-icon">&#9658;</span>
+                </div>
+            </div>
+
+            <div class="footer-col empty-col"></div>
+
+            <div class="footer-col">
+                <h4>SITE UPDATED</h4>
+                <p>On 29-08-2026 at 10:25:59 am</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>COPYRIGHT &copy; 2026 OUR LADY OF FLIGHT CHURCH MAPUSA BARDEZ GOA DESIGN BY ME | ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+</body>
+</html>

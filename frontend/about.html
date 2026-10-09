@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Our Lady of Flight Church</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <!-- Admin Top Bar (Controlled dynamically via main.js) -->
+    <div id="admin-controls" class="admin-bar" style="display: none;">
+        <span>Logged in as Admin</span>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+
+    <img src="../../images/church-background.jpg" alt="Church background" class="church-image"> 
+    <!-- or blue colour background -->
+     
+    <!-- Header / Navigation -->
+    <header class="nav-bar">
+        <div class="logo"><img src="../../images/church-logo.png" alt="The logo"></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="happenings.html">Happenings</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- About Content Section with Readability Container Box -->
+    <main class="about-container">
+        <div class="about-content-box">
+            <h1>Our History & Heritage</h1>
+            
+            <!-- Featured Archive Image on Top -->
+            <div class="featured-image-wrapper">
+                <div class="archive-image-container" id="archiveImageWrapper">
+                    <!-- Using a clean SVG data URI placeholder so it never shows a broken image icon -->
+                    <img id="archiveImgPreview" 
+                        src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'><rect width='600' height='300' fill='%23e1e8ed'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='%23777'>No Archive Image Uploaded</text></svg>" 
+                        alt="Historical Archives" 
+                        class="featured-archive-img">
+                    
+                    <!-- Admin Hover Overlay -->
+                    <div id="adminImgOverlay" class="admin-img-overlay" style="display: none;">
+                        <label for="imageUploadInput" class="upload-btn-label">Change Image</label>
+                        <input type="file" id="imageUploadInput" accept="image/*" style="display: none;">
+                        <button id="removeImageBtn" class="remove-btn">Remove</button>
+                    </div>
+                    
+                    <!-- <span class="image-caption">Archival photo capturing the early days of our parish</span> -->
+                </div>
+            </div>
+
+            <!-- History Narrative Content -->
+            <div class="history-text-block" id="historyTextContainer">
+                <p id="historyParagraph">Loading history content...</p>
+            </div>
+
+            <!-- Edit button for admins -->
+            <div id="adminEditControls" style="display: none; margin-top: 15px;">
+                <button id="editHistoryBtn" class="remove-btn" style="background-color: #f0ad4e;">Edit History Content</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>SITE NAVIGATION</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="happenings.html">Happenings</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>OFFICE HOURS</h4>
+                <p>Mon - Sat: 8:30 AM - 12:30 PM & 3:30 PM - 5:00 PM</p>
+                <p>2nd Saturday & 4th Saturday Half Day (8:30 AM - 12:30 PM)</p>
+                <p>Sunday Closed</p>
+                <p>Public Holidays Closed</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>ADDRESS</h4>
+                <p>Cunchelim Mapusa<br>Bardez -Goa.<br>Pin code: 403507</p>
+                <p>E-mail: example@gmail.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <span class="social-icon">f</span>
+                    <span class="social-icon">i</span>
+                    <span class="social-icon">&#9658;</span>
+                </div>
+            </div>
+
+            <div class="footer-col empty-col"></div>
+
+            <div class="footer-col">
+                <h4>SITE UPDATED</h4>
+                <p>On 29-08-2026 at 10:25:59 am</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>COPYRIGHT &copy; 2026 OUR LADY OF FLIGHT CHURCH MAPUSA BARDEZ GOA DESIGN BY ME | ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="../js/main.js" defer></script>
+    <script src="../js/about.js" defer></script>
+</body>
+</html>
