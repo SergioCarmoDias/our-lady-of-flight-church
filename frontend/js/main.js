@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
 // Determine the API base URL automatically based on where the app is running
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000'                    // Local development
-    : 'https://your-backend-app.onrender.com';   // Your live Render backend URL
+    : 'https://our-lady-of-flight-church-backend.vercel.app';   // Your live Render backend URL
